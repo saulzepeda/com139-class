@@ -22,6 +22,11 @@ def report_all_by_field_obj(my_objs: list, my_field: str, w_filter: bool = False
             print('No mode found in data')
         print('Stdev %s: %5.3f' % (my_field, get_stdev_obj(my_objs, my_field, w_filter, val)))
         print('Variance %s: %5.3f' % (my_field, get_variance_obj(my_objs, my_field, w_filter, val)))
+        
+        min_customers = get_matching_value_obj(my_objs, my_field, min_time)
+        total_cust = len(my_objs)
+        percentage = len(min_customers) / total_cust
+        print(f'Percentage of minimal value: {percentage}')
         # TODO: Calculate the percentage of minimal value
         # TODO: Group std dev customers and display the list
     else:

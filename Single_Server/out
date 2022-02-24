@@ -1,0 +1,150 @@
+Bank Renege
+Total simulation time:   87.224
+Customer 00 | SUCCESS | Arrived:   0.000  Left:   3.216 ==> Total time:  3.216 |  -- NO WAIT -- | Serve time:  3.216 
+Customer 01 | SUCCESS | Arrived:   3.060  Left:  14.352 ==> Total time: 11.292 |  -- NO WAIT -- | Serve time: 11.292 
+Customer 02 | SUCCESS | Arrived:   3.818  Left:   9.298 ==> Total time:  5.480 |  -- NO WAIT -- | Serve time:  5.480 
+Customer 03 | SUCCESS | Arrived:  10.500  Left:  17.539 ==> Total time:  7.039 |  -- NO WAIT -- | Serve time:  7.039 
+Customer 04 | RENEGED | Arrived:  10.591  Left:  12.386 ==> Total time:  1.795 | Waited:  1.795 | 
+Customer 05 | RENEGED | Arrived:  10.671  Left:  13.851 ==> Total time:  3.180 | Waited:  3.180 | 
+Customer 06 | SUCCESS | Arrived:  13.820  Left:  30.929 ==> Total time: 17.110 | Waited:  0.532 | Serve time: 16.577 
+Customer 07 | SUCCESS | Arrived:  14.567  Left:  19.229 ==> Total time:  4.662 | Waited:  2.972 | Serve time:  1.690 
+Customer 08 | RENEGED | Arrived:  14.586  Left:  16.947 ==> Total time:  2.361 | Waited:  2.361 | 
+Customer 09 | SUCCESS | Arrived:  18.180  Left:  20.202 ==> Total time:  2.022 | Waited:  1.049 | Serve time:  0.973 
+Customer 10 | SUCCESS | Arrived:  27.634  Left:  36.891 ==> Total time:  9.256 |  -- NO WAIT -- | Serve time:  9.256 
+Customer 11 | SUCCESS | Arrived:  27.939  Left:  38.613 ==> Total time: 10.673 | Waited:  2.990 | Serve time:  7.684 
+Customer 12 | RENEGED | Arrived:  32.877  Left:  35.391 ==> Total time:  2.514 | Waited:  2.514 | 
+Customer 13 | SUCCESS | Arrived:  43.725  Left:  53.362 ==> Total time:  9.637 |  -- NO WAIT -- | Serve time:  9.637 
+Customer 14 | SUCCESS | Arrived:  46.134  Left:  58.328 ==> Total time: 12.193 |  -- NO WAIT -- | Serve time: 12.193 
+Customer 15 | SUCCESS | Arrived:  52.070  Left:  56.619 ==> Total time:  4.550 | Waited:  1.293 | Serve time:  3.257 
+Customer 16 | RENEGED | Arrived:  52.210  Left:  53.529 ==> Total time:  1.319 | Waited:  1.319 | 
+Customer 17 | RENEGED | Arrived:  53.235  Left:  54.639 ==> Total time:  1.404 | Waited:  1.404 | 
+Customer 18 | RENEGED | Arrived:  54.030  Left:  56.490 ==> Total time:  2.459 | Waited:  2.459 | 
+Customer 19 | SUCCESS | Arrived:  57.059  Left:  60.165 ==> Total time:  3.106 |  -- NO WAIT -- | Serve time:  3.106 
+Customer 20 | SUCCESS | Arrived:  58.446  Left:  67.840 ==> Total time:  9.394 |  -- NO WAIT -- | Serve time:  9.394 
+Customer 21 | SUCCESS | Arrived:  66.724  Left:  68.508 ==> Total time:  1.784 |  -- NO WAIT -- | Serve time:  1.784 
+Customer 22 | SUCCESS | Arrived:  67.287  Left:  78.057 ==> Total time: 10.770 | Waited:  0.553 | Serve time: 10.217 
+Customer 23 | SUCCESS | Arrived:  68.718  Left:  87.224 ==> Total time: 18.506 |  -- NO WAIT -- | Serve time: 18.506 
+Customer 24 | RENEGED | Arrived:  71.161  Left:  73.077 ==> Total time:  1.916 | Waited:  1.916 | 
+
+ === Report for wait field ===
+Max wait: 3.180 by ['Customer 05']
+Min wait: 0.000 by ['Customer 00', 'Customer 01', 'Customer 02', 'Customer 03', 'Customer 10', 'Customer 13', 'Customer 14', 'Customer 19', 'Customer 20', 'Customer 21', 'Customer 23']
+Mean wait: 1.054
+Median wait: 0.553
+Mode wait: 0.000
+Stdev wait: 1.156
+Variance wait: 1.335
+Percentage of minimal value: 0.44
+
+ === Report for total_time field ===
+Max total_time: 18.506 by ['Customer 23']
+Min total_time: 1.319 by ['Customer 16']
+Mean total_time: 6.306
+Median total_time: 4.550
+No mode found in data
+Stdev total_time: 5.008
+Variance total_time: 25.084
+Percentage of minimal value: 0.04
+
+ === Report for serving_time field ===
+Max serving_time: 18.506 by ['Customer 23']
+Min serving_time: 0.973 by ['Customer 09']
+Mean serving_time: 7.724
+Median serving_time: 7.684
+No mode found in data
+Stdev serving_time: 5.164
+Variance serving_time: 26.669
+Percentage of minimal value: 0.04
+
+ === Report for status field ===
+True
+[<Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>]
+
+ === Report for Service resource ===
+Max queue: 2.000
+
+ === Service === 
+0 ::   5.112
+1 ::  32.922
+2 ::  49.190
+
+ === Service === 
+0 ::   5.861
+1 ::  37.744
+2 ::  56.395
+Total:  100.00 %
+Bank Renege
+Total simulation time:   87.224
+Customer 00 | SUCCESS | Arrived:   0.000  Left:   3.216 ==> Total time:  3.216 |  -- NO WAIT -- | Serve time:  3.216 
+Customer 01 | SUCCESS | Arrived:   3.060  Left:  14.352 ==> Total time: 11.292 |  -- NO WAIT -- | Serve time: 11.292 
+Customer 02 | SUCCESS | Arrived:   3.818  Left:   9.298 ==> Total time:  5.480 |  -- NO WAIT -- | Serve time:  5.480 
+Customer 03 | SUCCESS | Arrived:  10.500  Left:  17.539 ==> Total time:  7.039 |  -- NO WAIT -- | Serve time:  7.039 
+Customer 04 | RENEGED | Arrived:  10.591  Left:  12.386 ==> Total time:  1.795 | Waited:  1.795 | 
+Customer 05 | RENEGED | Arrived:  10.671  Left:  13.851 ==> Total time:  3.180 | Waited:  3.180 | 
+Customer 06 | SUCCESS | Arrived:  13.820  Left:  30.929 ==> Total time: 17.110 | Waited:  0.532 | Serve time: 16.577 
+Customer 07 | SUCCESS | Arrived:  14.567  Left:  19.229 ==> Total time:  4.662 | Waited:  2.972 | Serve time:  1.690 
+Customer 08 | RENEGED | Arrived:  14.586  Left:  16.947 ==> Total time:  2.361 | Waited:  2.361 | 
+Customer 09 | SUCCESS | Arrived:  18.180  Left:  20.202 ==> Total time:  2.022 | Waited:  1.049 | Serve time:  0.973 
+Customer 10 | SUCCESS | Arrived:  27.634  Left:  36.891 ==> Total time:  9.256 |  -- NO WAIT -- | Serve time:  9.256 
+Customer 11 | SUCCESS | Arrived:  27.939  Left:  38.613 ==> Total time: 10.673 | Waited:  2.990 | Serve time:  7.684 
+Customer 12 | RENEGED | Arrived:  32.877  Left:  35.391 ==> Total time:  2.514 | Waited:  2.514 | 
+Customer 13 | SUCCESS | Arrived:  43.725  Left:  53.362 ==> Total time:  9.637 |  -- NO WAIT -- | Serve time:  9.637 
+Customer 14 | SUCCESS | Arrived:  46.134  Left:  58.328 ==> Total time: 12.193 |  -- NO WAIT -- | Serve time: 12.193 
+Customer 15 | SUCCESS | Arrived:  52.070  Left:  56.619 ==> Total time:  4.550 | Waited:  1.293 | Serve time:  3.257 
+Customer 16 | RENEGED | Arrived:  52.210  Left:  53.529 ==> Total time:  1.319 | Waited:  1.319 | 
+Customer 17 | RENEGED | Arrived:  53.235  Left:  54.639 ==> Total time:  1.404 | Waited:  1.404 | 
+Customer 18 | RENEGED | Arrived:  54.030  Left:  56.490 ==> Total time:  2.459 | Waited:  2.459 | 
+Customer 19 | SUCCESS | Arrived:  57.059  Left:  60.165 ==> Total time:  3.106 |  -- NO WAIT -- | Serve time:  3.106 
+Customer 20 | SUCCESS | Arrived:  58.446  Left:  67.840 ==> Total time:  9.394 |  -- NO WAIT -- | Serve time:  9.394 
+Customer 21 | SUCCESS | Arrived:  66.724  Left:  68.508 ==> Total time:  1.784 |  -- NO WAIT -- | Serve time:  1.784 
+Customer 22 | SUCCESS | Arrived:  67.287  Left:  78.057 ==> Total time: 10.770 | Waited:  0.553 | Serve time: 10.217 
+Customer 23 | SUCCESS | Arrived:  68.718  Left:  87.224 ==> Total time: 18.506 |  -- NO WAIT -- | Serve time: 18.506 
+Customer 24 | RENEGED | Arrived:  71.161  Left:  73.077 ==> Total time:  1.916 | Waited:  1.916 | 
+
+ === Report for wait field ===
+Max wait: 3.180 by ['Customer 05']
+Min wait: 0.000 by ['Customer 00', 'Customer 01', 'Customer 02', 'Customer 03', 'Customer 10', 'Customer 13', 'Customer 14', 'Customer 19', 'Customer 20', 'Customer 21', 'Customer 23']
+Mean wait: 1.054
+Median wait: 0.553
+Mode wait: 0.000
+Stdev wait: 1.156
+Variance wait: 1.335
+Percentage of minimal value: 0.44
+
+ === Report for total_time field ===
+Max total_time: 18.506 by ['Customer 23']
+Min total_time: 1.319 by ['Customer 16']
+Mean total_time: 6.306
+Median total_time: 4.550
+No mode found in data
+Stdev total_time: 5.008
+Variance total_time: 25.084
+Percentage of minimal value: 0.04
+
+ === Report for serving_time field ===
+Max serving_time: 18.506 by ['Customer 23']
+Min serving_time: 0.973 by ['Customer 09']
+Mean serving_time: 7.724
+Median serving_time: 7.684
+No mode found in data
+Stdev serving_time: 5.164
+Variance serving_time: 26.669
+Percentage of minimal value: 0.04
+
+ === Report for status field ===
+True
+[<Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.SUCCESS: (1, 'SUCCESS state.')>, <Status.RENEGED: (3, 'RENEGED state. Used when the gen_customer is tired of waiting')>]
+
+ === Report for Service resource ===
+Max queue: 2.000
+
+ === Service === 
+0 ::   5.112
+1 ::  32.922
+2 ::  49.190
+
+ === Service === 
+0 ::   5.861
+1 ::  37.744
+2 ::  56.395
+Total:  100.00 %
