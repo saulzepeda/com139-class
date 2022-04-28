@@ -6,7 +6,12 @@ https://github.com/Guilouf/python_realtime_fluidsim
 """
 import numpy as np
 import math
+import argparse
 
+parser = argparse.ArgumentParser(description="Runs Conway's Game of Life system.py.")
+#arguments
+parser.add_argument('-c', '--config', dest='config_file', required=True)
+args = parser.parse_args()
 
 class Fluid:
 
@@ -16,7 +21,7 @@ class Fluid:
         self.cntx = 1
         self.cnty = -1
 
-        self.size = 60  # map size
+        self.size = 80  # map size
         self.dt = 0.2  # time interval
         self.iter = 2  # linear equation solving iteration number
 
@@ -160,6 +165,59 @@ class Fluid:
             self.roty = self.rotx
         return self.rotx, self.roty
 
+def read_config(lines):
+    band = 0
+    densities = []
+    velocities = []
+    color = ''
+    objects = []
+    
+    #0: read
+    #1: velocity
+    #2: density
+    #3: color
+
+    for line in lines:
+        line = line.rstrip() #remove the \n at the end of each line
+        
+        if line == 'end':
+            band = 0
+            continue
+
+        if band == 1: #Velocities
+            data = line.split(' ')
+            tmp = ((data[0], data[1]), (data[2], data[3]))
+            velocities.append(tmp)
+            continue
+        elif band == 2: #Densities
+            data = line.split(' ')
+            tmp = ((data[0], data[1], data[2], data[3]), data[4])
+            densities.append(tmp)
+            continue
+        elif band == 3:
+            color = line
+            continue
+        elif band == 4:
+            data = line.split()
+            tmp = ((data[0], data[1]), (data[2], data[3]))
+            objects.append(tmp)
+
+
+        if line == 'velocities':
+            band = 1
+            continue
+        elif line == 'densities':
+            band = 2
+            continue
+        elif line == 'color':
+            band = 3
+            continue
+        elif line == 'object':
+            band = 4
+            continue
+        
+
+    return densities, velocities, color, objects
 
 if __name__ == "__main__":
     try:
@@ -168,11 +226,37 @@ if __name__ == "__main__":
 
         inst = Fluid()
 
+        with open(args.config_file, 'r') as file:
+            lines = file.readlines()
+        
+        densities, velocities, color, objects = read_config(lines)
+
         def update_im(i):
             # We add new density creators in here
-            inst.density[14:17, 14:17] += 100  # add density into a 3*3 square
+            #inst.density[14:17, 14:17] += 100  # add density into a 3*3 square
+            for d in densities:
+                # add density into a n*n square
+                pos, value = d
+                a, b, c, d = map(int, pos)
+                value = int(value)
+                inst.density[a:b, c:d] += value
             # We add velocity vector values in here
-            inst.velo[20, 20] = [-2, -2]
+            #inst.velo[20, 20] = [-2, -2]
+            for v in velocities:
+                # add density into a n*n square
+                pos, value = v
+                a, b = map(int, pos)
+                c, d = map(int, value)
+                inst.velo[a, b] = [c, d]
+
+            for obj in objects:
+                # add density into a n*n square
+                start, end = obj
+                a, b = map(int, start)
+                c, d = map(int, end)
+                inst.velo[a:b, c:d] = 0
+                inst.density[a+1:b-1, c+1:d-1] += 100
+
             inst.step()
             im.set_array(inst.density)
             q.set_UVC(inst.velo[:, :, 1], inst.velo[:, :, 0])
@@ -182,12 +266,12 @@ if __name__ == "__main__":
         fig = plt.figure()
 
         # plot density
-        im = plt.imshow(inst.density, vmax=100, interpolation='bilinear')
+        im = plt.imshow(inst.density, vmax=100, interpolation='bilinear', cmap=color)
 
         # plot vector field
         q = plt.quiver(inst.velo[:, :, 1], inst.velo[:, :, 0], scale=10, angles='xy')
         anim = animation.FuncAnimation(fig, update_im, interval=0)
-        # anim.save("movie.mp4", fps=30, extra_args=['-vcodec', 'libx264'])
+        anim.save("f5.mp4", fps=30, extra_args=['-vcodec', 'libx264'])
         plt.show()
 
     except ImportError:
