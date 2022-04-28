@@ -1,0 +1,12 @@
+Development Log
+
+
+Challenge: Data Order
+It was not that import, but at the beginning it was hard to me to understand each 
+of the parameters and numbers for each velocity, density and forces.
+What means each position, etc.
+
+
+Challenge: Velocity forces
+It was the most challenging part to me
+and also this part was the one that I wasn't able to do it.

@@ -1,0 +1,17 @@
+velocities
+10 10 3 3
+15 15 2 2
+end
+
+densities
+10 70 10 70 100
+end
+
+color
+magma
+end
+
+object
+30 30 30 30
+40 40 40 40
+end

@@ -1,0 +1,23 @@
+velocities
+5 5 1 1
+15 15 6 6
+end
+
+densities
+10 30 10 30 100
+40 65 40 65 100
+end
+
+color
+plasma
+end
+
+object
+10 15 10 15
+20 25 20 25
+end
+
+object
+30 30 30 30
+40 40 40 40
+end
